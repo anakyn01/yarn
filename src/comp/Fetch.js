@@ -1,9 +1,15 @@
 import React,{Component} from "react";
 
 class Fetch extends Component{
-    //자바스크립트가 원하는 방향을 간단히 말하자면..비동기
+    //자바스크립트가 원하는 방향을 간단히 말하자면..비동기 get
     componentDidMount = async () => {
-        const response = await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia/Seoul')//1)
+        const response = await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia/Seoul',{
+method:'POST',
+headers:{
+'Content-Type':'application/json',
+},
+body:{a:"react", b:300},            
+        });//1)
         //https://timeapi.io/api/time/current/zone?timeZone=Asia/Seoul
         const body = await response.json();//2)
         alert(body.date)

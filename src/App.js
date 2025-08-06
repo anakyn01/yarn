@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 //app.js에 cdn선언
 import Es6 from './comp/Es6';
 import Jquery from './comp/Jquery';
+import Sweet from './comp/Sweet';
 
 import Comp from './comp/Comp';
 //객체지향언어는 불필요한 코드에 반복을 줄이고 언제든 재활용 하세요
@@ -15,7 +16,8 @@ function App() {
 <>
 <h1>리액트 시작하기</h1>
 <p>sass적용</p>
-<Jquery/>
+<Sweet/>
+{/*<Jquery/>*/}
 {/*<Comp/>*/}
 {/*<Es6/>*/}
 </>

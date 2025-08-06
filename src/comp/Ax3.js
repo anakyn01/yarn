@@ -1,7 +1,7 @@
-import {Table, Container, Row, Col} from 'react-bootstrap';
-import React,{Component} from 'react';
+import React, { Component } from 'react';
+
 class Ax extends Component {
-      constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       responseFPList: null,
@@ -52,30 +52,34 @@ class Ax extends Component {
     return result;
   };
 
-  render(){
-    return(
-<>
-<Container>
-    <Row>
-        <Col>
-<Table>
-<thead>
- <tr>
-<th>Row</th><th>일자</th><th>시간</th> 
-<th>연령대</th><th>성별</th><th>시</th><th>군구</th>
-<th>유동인구수</th>   
-</tr>   
-</thead>
-<tbody>
-{this.state.append_FPList}
-</tbody>
-</Table>        
-        </Col>
-    </Row>
-</Container>
-</>
+  render() {
+    return (
+      <section className="sub_wrap">
+        <article className="s_cnt mp_pro_li ct1 mp_pro_li_admin">
+          <div className="li_top">
+            <h2 className="s_tit1">서울시 유동인구 데이터 - (예시)</h2>
+          </div>
+          <div className="list_cont list_cont_admin">
+            <table className="table_ty1 fp_tlist">
+              <thead>
+                <tr>
+                  <th>Row</th>
+                  <th>일자</th>
+                  <th>시간</th>
+                  <th>연령대</th>
+                  <th>성별</th>
+                  <th>시</th>
+                  <th>군구</th>
+                  <th>유동인구수</th>
+                </tr>
+              </thead>
+              <tbody>{this.state.append_FPList}</tbody>
+            </table>
+          </div>
+        </article>
+      </section>
     );
   }
-
 }
+
 export default Ax;
